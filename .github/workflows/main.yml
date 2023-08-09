@@ -12,7 +12,7 @@ jobs:
     - name: rsync deployments
       uses: burnett01/rsync-deployments@6.0.0
       with:
-        switches: -avzr --delete --exclude=".git,.github" --include="" --filter=""
+        switches: -avzr --delete --exclude=".git" --exclude=".github" --include="" --filter=""
         path: .
         remote_path: ${{ secrets.DESTINATION }}
         remote_host: ${{ secrets.WP_HOST }}
