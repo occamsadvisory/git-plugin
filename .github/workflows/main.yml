@@ -19,6 +19,6 @@ jobs:
         port: 3022
         username: '180022-3496'
         privateKey: ${{ secrets.SSH_KEY }}
-        localPath: '/home/runner/work/git-plugin/git-plugin'
-        remotePath: ${{ secrets.DESTINATION }}
+        localPath: '/home/runner/work/git-plugin/git-plugin/'
+        remotePath: '/var/www/webroot/ROOT/wp-content/plugins/git-plugin/'
           
