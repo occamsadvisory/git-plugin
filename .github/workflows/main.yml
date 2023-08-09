@@ -1,7 +1,7 @@
 on:
-  push:
-    branches:
-    - main
+  # push:
+  #   branches:
+  #   - main
   workflow_dispatch:
 
 jobs:
@@ -12,20 +12,13 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
 
-    - name: Get changed files
-      id: changed-files
-      uses: tj-actions/changed-files@v35
+    - name: Copy via ssh
+      uses: garygrossgarten/github-action-scp@v0.8.0
       with:
-        since_last_remote_commit: true
-        separator: ","
-
-    - name: copy file to server
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.WP_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        source: ${{ steps.changed-files.outputs.all_changed_files }}
-        target: ${{ secrets.DESTINATION }}
+        local: git-plugin
+        remote: ${{ secrets.DESTINATION }}
+        host: gate.cloudjiffy.com
+        username: 180022-3496
+        port: 3022
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
           
