@@ -15,9 +15,9 @@
  * @wordpress-plugin
  * Plugin Name:       Git Plugin
  * Plugin URI:        https://github.com/occamsadvisory/git-plugin
- * Description:       For testing git features
- * Version:           1.0.3
- * Author:            Vinay Singh
+ * Description:       For testing git and DevOps features
+ * Version:           1.0.4
+ * Author:            Vinay B
  * Author URI:        https://github.com/rahulmr
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'GIT_PLUGIN_VERSION', '1.0.3' );
+define( 'GIT_PLUGIN_VERSION', '1.0.4' );
 
 /**
  * The code that runs during plugin activation.
