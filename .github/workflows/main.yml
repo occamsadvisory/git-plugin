@@ -12,11 +12,11 @@ jobs:
     - name: rsync deployments
       uses: burnett01/rsync-deployments@6.0.0
       with:
-        switches: -avzr --delete --exclude=".git" --include="" --filter=""
+        switches: -avzr --delete --exclude=".git,.github" --include="" --filter=""
         path: .
         remote_path: ${{ secrets.DESTINATION }}
-        remote_host: gate.cloudjiffy.com
-        remote_port: 3022
-        remote_user: '180022-3496'
+        remote_host: ${{ secrets.WP_HOST }}
+        remote_port: ${{ secrets.SSH_PORT }}
+        remote_user: '${{ secrets.SSH_USERNAME }}'
         remote_key: ${{ secrets.SSH_KEY }}
 
