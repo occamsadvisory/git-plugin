@@ -16,8 +16,8 @@
  * Plugin Name:       Git Plugin
  * Plugin URI:        https://github.com/occamsadvisory/git-plugin
  * Description:       For testing git features
- * Version:           1.0.2
- * Author:            Rahul Raut
+ * Version:           1.0.3
+ * Author:            Vinay Singh
  * Author URI:        https://github.com/rahulmr
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'GIT_PLUGIN_VERSION', '1.0.2' );
+define( 'GIT_PLUGIN_VERSION', '1.0.3' );
 
 /**
  * The code that runs during plugin activation.
