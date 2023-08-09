@@ -16,7 +16,7 @@
  * Plugin Name:       Git Plugin
  * Plugin URI:        https://google.com
  * Description:       For testing git features
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Test Author
  * Author URI:        https://google.com
  * License:           GPL-2.0+
